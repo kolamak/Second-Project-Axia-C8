@@ -15,7 +15,7 @@ email: z
     .email({
         message: 'Please enter a valid email address'
     })
-    // pass a regex to ensure this is an email
+    // dont forget to pass a regex to ensure this is an email
     .nonempty({
          message: 'Email is required'   
     }),

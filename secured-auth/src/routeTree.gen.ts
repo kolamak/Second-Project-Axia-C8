@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SignUtRouteImport } from './routes/signUt'
+import { Route as SignUpRouteImport } from './routes/signUp'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as AboutRouteImport } from './routes/about'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const SignUtRoute = SignUtRouteImport.update({
   id: '/signUt',
   path: '/signUt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignUpRoute = SignUpRouteImport.update({
+  id: '/signUp',
+  path: '/signUp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
+  '/signUp': typeof SignUpRoute
   '/signUt': typeof SignUtRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
+  '/signUp': typeof SignUpRoute
   '/signUt': typeof SignUtRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,15 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
+  '/signUp': typeof SignUpRoute
   '/signUt': typeof SignUtRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/home' | '/login' | '/signUt'
+  fullPaths: '/' | '/about' | '/home' | '/login' | '/signUp' | '/signUt'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/home' | '/login' | '/signUt'
-  id: '__root__' | '/' | '/about' | '/home' | '/login' | '/signUt'
+  to: '/' | '/about' | '/home' | '/login' | '/signUp' | '/signUt'
+  id: '__root__' | '/' | '/about' | '/home' | '/login' | '/signUp' | '/signUt'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +85,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   HomeRoute: typeof HomeRoute
   LoginRoute: typeof LoginRoute
+  SignUpRoute: typeof SignUpRoute
   SignUtRoute: typeof SignUtRoute
 }
 
@@ -86,6 +96,13 @@ declare module '@tanstack/react-router' {
       path: '/signUt'
       fullPath: '/signUt'
       preLoaderRoute: typeof SignUtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signUp': {
+      id: '/signUp'
+      path: '/signUp'
+      fullPath: '/signUp'
+      preLoaderRoute: typeof SignUpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -124,6 +141,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   HomeRoute: HomeRoute,
   LoginRoute: LoginRoute,
+  SignUpRoute: SignUpRoute,
   SignUtRoute: SignUtRoute,
 }
 export const routeTree = rootRouteImport

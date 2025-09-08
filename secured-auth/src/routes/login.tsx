@@ -19,8 +19,8 @@ function RouteComponent() {
 return (
     <>
      <div className="flex items-center justify-center bg-gray-300" >
-     <div className="w-100 h-100 p-5 my-32 bg-white rounded-lg shadow-md flex flex-col items-center">
-        <h1 className="text-lg text-[#3d3d55] font-bold">Login to your account</h1>
+     <div className="w-100 h-105 p-4 my-28.5 bg-white rounded-lg shadow-md flex flex-col items-center">
+        <h1 className="text-lg text-[#3d3d55] font-bold pb-4">Login to your account</h1>
          <div>
            Enter your email below to login to your account
          </div>

@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import Nav from '../nav'
-import Footer from '../footer'
+// import Nav from '../nav'
+// import Footer from '../footer'
 // import SignUp from '../signUp/pages';
 // import { useState } from 'react'
 
@@ -22,8 +22,8 @@ function Index() {
 
   return (
     <>
-    <Nav />
-    <Footer />
+    {/* <Nav /> */}
+    {/* <Footer /> */}
     {/* <SignUp /> */}
     </>
   )

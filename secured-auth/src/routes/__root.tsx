@@ -16,7 +16,7 @@ const RootLayout = () => (
           </ul>
         </div>
         <div className='flex gap-4'>
-        <Link to="/signUp"><button className='bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-600 border border-white-600 cursor-pointer'>
+        <Link to="/signup"><button className='bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-600 border border-white-600 cursor-pointer'>
           Sign up here!
         </button></Link> {' '}
         <Link to="/login"><button className='bg-white text-black px-4 py-2 rounded-md hover:bg-gray-300 font-bold border border-[#3d3d55]-600 cursor-pointer'>

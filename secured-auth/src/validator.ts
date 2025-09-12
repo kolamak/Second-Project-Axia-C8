@@ -37,4 +37,4 @@ confirmPassword:
     }),
 })
 
-export type signUpData = z.infer<typeof signUpSchema>;
+export type SignUpFormData = z.infer<typeof signUpSchema>;

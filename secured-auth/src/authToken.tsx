@@ -10,23 +10,24 @@ const AuthToken = () => {
     
     return(
         <>
-        <div className="w-full h-full bg-[#3d3d55]">
-            <h1 className="">Enter Authentication Code</h1>
+        <div className="flex flex-col m-2 bg-white">
+            <h1 className="font-bold mb-3 text-2xl">Enter Authentication Code</h1>
             {/* no forget error message */}
-            <div className="w-full h-50 flex item-center ">
-                <div className="w-30 h-30 rounded-md border border-gray-900">
-                </div>
-                <div className="w-30 h-30 rounded-md border border-gray-900">
-                </div>
-                <div className="w-30 h-30 rounded-md border border-gray-900">
-                </div>
-                <div className="w-30 h-30 rounded-md border border-gray-900">
-                </div>
-                <div className="w-30 h-30 rounded-md border border-gray-900">
-                </div>
-                <div className="w-30 h-30 rounded-md border border-gray-900">
-                </div>
+            <div className="w-full gap-4 flex item-center ">
+                <input type="text" className="w-20 h-20 text-hidden rounded-md text-center border border-gray-900">
+                </input>
+                <input type="text" className="w-20 h-20 text-hidden rounded-md text-center border border-gray-900">
+                </input>
+                <input type="text" className="w-20 h-20 text-hidden rounded-md text-center border border-gray-900">
+                </input>
+                <input type="text" className="w-20 h-20 text-hidden rounded-md text-center border border-gray-900">
+                </input>
+                <input type="text" className="w-20 h-20 text-hidden rounded-md text-center border border-gray-900">
+                </input>
+                <input type="text" className="w-20 h-20 text-hidden rounded-md text-center border border-gray-900">
+                </input>
             </div>
+            <a className="font-bold m-0" href="http://">Resend code?</a>
         </div>
         </>
     )
